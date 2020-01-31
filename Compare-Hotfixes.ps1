@@ -1,0 +1,2 @@
+﻿Compare-Object -ReferenceObject (Get-HotFix -ComputerName <HostnameA>) -DifferenceObject (Get-Hotfix -ComputerName <HostnameB>) -Property HotFixID
+#Get-HotFix -ComputerName <Hostname> | Where-Object {$_.HotFixID -like "*KB2972100"}

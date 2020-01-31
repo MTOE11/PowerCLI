@@ -1,0 +1,1 @@
+﻿Get-WmiObject -ComputerName <HostnameHere> -Class Win32_LogicalDisk | Format-Table -Property DeviceID,@{Name="Size (GB)";Expression={$_.Size / 1GB};formatstring='N2'} -AutoSize

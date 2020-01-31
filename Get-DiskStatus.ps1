@@ -1,0 +1,1 @@
+﻿Get-WmiObject -ComputerName <HostNameHere> -Class Win32_LogicalDisk | Format-Table -Property DeviceID,@{Name="FreeSpace (GB)";Expression={$_.freespace / 1GB};formatstring='N2'} -AutoSize
